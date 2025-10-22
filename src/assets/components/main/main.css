@@ -1,0 +1,67 @@
+main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 8%;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #570229;
+}
+
+.containerCards-main {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-inline: 20vw;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 12vw;
+  height: 14vw;
+  border-radius: 4px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card .precio {
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+}
+button {
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  background-color: #570229;
+  color: #ffffff;
+  height: 4vh;
+}

@@ -1,0 +1,23 @@
+header {
+  width: 100%;
+  height: 80vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-logo {
+  width: 50%;
+}

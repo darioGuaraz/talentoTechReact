@@ -1,0 +1,154 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #0000004d;
+  padding-left: 5vw;
+  z-index: 1000;
+  box-sizing: border-box; /* AGREGADO: Esto hace que el padding se incluya en el width */
+}
+
+/* Cuando el menú está abierto forzamos fondo blanco y texto oscuro */
+.navbar.menu-open {
+  background-color: #ffffff;
+}
+
+.navbar.menu-open .navbar-links,
+.navbar.menu-open a {
+  color: #000000;
+}
+
+.navbar:hover {
+  background-color: rgb(255, 255, 255);
+  transition: 0.8s;
+}
+
+.navbar:hover a {
+  color: black;
+  transition: 0.8s;
+}
+
+.navbar-container {
+  display: flex;
+}
+
+.navbar-logo {
+  height: 8vh;
+}
+
+#aHome {
+  border-bottom: solid 4px #ffffff;
+  padding: 24px;
+  padding-inline: 10px;
+}
+
+.navbar :hover #aHome {
+  border-bottom: solid 4px #570229;
+}
+
+.navbar-links {
+  padding-left: 10%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: rgb(253, 253, 253);
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.navbar-links a:hover {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.navbar-links.active {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255);
+}
+.navbar-links.active a {
+  font-weight: 400;
+}
+.navbar-links.active #aHome {
+  text-align: start;
+  padding: 0;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 912px) {
+  .navbar {
+    padding-top: 0vw;
+    background-color: #ffffff;
+  }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar-logo {
+    padding-left: -10px;
+    height: auto;
+    width: 30vw;
+  }
+  .hamburger {
+    display: block;
+    padding-right: 5%;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 95%;
+    height: 50vh;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s ease;
+    padding: 2rem;
+    box-sizing: border-box; /* AGREGADO: También aquí para consistencia */
+  }
+
+  .navbar-links.active {
+    top: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
