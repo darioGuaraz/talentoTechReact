@@ -6,6 +6,7 @@ main {
   justify-content: center;
   justify-items: center;
   gap: 8%;
+  margin-bottom: 20vh;
 }
 
 h1 {
@@ -65,5 +66,9 @@ button {
   border: none;
   background-color: #570229;
   color: #ffffff;
+}
+.btnSelect {
   height: 4vh;
 }
+
+/*SWeet alert api colors*/

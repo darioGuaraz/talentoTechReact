@@ -1,0 +1,44 @@
+/* WhatsAppBubble.css */
+.cart-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 10%;
+  position: fixed;
+  bottom: 0px;
+
+  background: #dfca6e;
+
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.cart-container img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.botoneraCart {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.botoneraDelete {
+  display: flex;
+  gap: 4px;
+}
+.btnCancelar,
+.btnVaciar {
+  text-align: center;
+  padding: 10px;
+}
+.btnComprar {
+  height: 6vh;
+}
+
+.btnComprar:hover {
+  background-color: #314e2d;
+}
