@@ -1,0 +1,20 @@
+/* WhatsAppBubble.css */
+.whatsapp-bubble {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.whatsapp-bubble:hover {
+  transform: scale(1.1);
+}
+.whatsapp-bubble img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}

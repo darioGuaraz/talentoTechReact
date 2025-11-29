@@ -1,19 +1,25 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./assets/components/navbar/Navbar";
-import Header from "./assets/components/header/Header";
-
-import CartManager from "./assets/components/CartManager";
+import Home from "./assets/pages/home/Home";
+import About from "./assets/pages/about/About";
+import Testify from "./assets/pages/testify/Testify";
+import Contact from "./assets/pages/contact/Contact";
+import WhatsAppBubble from "./assets/components/whatsappBuble/WhatsappBubble";
 
 import "./App.css";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Header />
-
-      <CartManager />
-    </>
+      <WhatsAppBubble />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/testify" element={<Testify />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

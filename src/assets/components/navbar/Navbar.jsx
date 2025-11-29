@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const logo = "img/headerlogo1.png";
-const logo2 = "img/headerlogo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,13 +34,9 @@ const Navbar = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="navbar-container">
-        <a href="#header" className="navbar-logo" onClick={closeMenu}>
-          <img
-            src={isMobile ? logo2 : isHovered ? logo2 : logo}
-            alt="MIC Live Travel"
-            className="navbar-logo"
-          />
-        </a>
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+          <img src={logo} alt="MIC Live Travel" className="navbar-logo" />
+        </Link>
 
         <button
           className={`hamburger ${isMenuOpen ? "active" : ""}`}
@@ -60,22 +54,20 @@ const Navbar = () => {
           id="primary-navigation"
           className={`navbar-links ${isMenuOpen ? "active" : ""}`}
         >
-          <a href="#header" onClick={closeMenu} id="aHome">
+          <Link to="/" onClick={closeMenu} id="aHome">
             Home
-          </a>
-          <a href="#about" onClick={closeMenu}>
+          </Link>
+          <Link to="/about" onClick={closeMenu}>
             Quienes Somos
-          </a>
+          </Link>
 
-          <a href="#testify" onClick={closeMenu}>
+          <Link to="/testify" onClick={closeMenu}>
             Testimonios
-          </a>
-          <a href="#services" onClick={closeMenu}>
-            Socios
-          </a>
-          <a href="#sponsors" onClick={closeMenu}>
+          </Link>
+
+          <Link to="/contact" onClick={closeMenu}>
             Contacto
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
