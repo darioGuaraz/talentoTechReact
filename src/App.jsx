@@ -4,7 +4,7 @@ import Home from "./assets/pages/home/Home";
 import About from "./assets/pages/about/About";
 import Testify from "./assets/pages/testify/Testify";
 import Contact from "./assets/pages/contact/Contact";
-import WhatsAppBubble from "./assets/components/whatsappBuble/WhatsappBubble";
+import WhatsAppBubble from "./assets/components/whatsappBubble/WhatsappBubble";
 
 import "./App.css";
 
